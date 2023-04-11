@@ -1,0 +1,28 @@
+.user__profile {
+  padding: 50px 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.user__profile_items {
+  display: flex;
+  .user__profile_item div {
+    margin: 15px 0;
+  }
+  .user__profile_item:first-child {
+    margin-right: 100px;
+    font-weight: 500;
+    color: #2c2c2c;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    strong {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .user__profile_item:last-child {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #808080;
+  }
+}

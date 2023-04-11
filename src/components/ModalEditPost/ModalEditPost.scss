@@ -1,0 +1,48 @@
+.edit__post {
+  width: 500px;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 25px 0;
+    text-align: center;
+    font-weight: 500;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    font-family: "Poppins";
+    color: #808080;
+    border: 1px solid #cbcbcb;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  textarea {
+    width: 100%;
+    border: 1px solid #cbcbcb;
+    padding: 10px;
+    font-size: 15px;
+    color: #808080;
+    font-family: "Poppins";
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  .save__post_btn {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #177bc3;
+    align-items: center;
+    padding: 5px 17px;
+    margin: 25px auto;
+    text-transform: uppercase;
+  }
+}

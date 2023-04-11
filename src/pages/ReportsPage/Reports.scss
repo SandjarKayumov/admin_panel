@@ -1,0 +1,23 @@
+
+.report__items{
+  display: flex;
+  justify-content: space-between;
+}
+.report__input {
+  margin: 0 15px 15px 0;
+}
+.export__btn {
+  display: flex;
+  align-items: center;
+  background-color: #329c18;
+}
+.report-select{
+  font-size: 18px;
+  padding: 10px;
+  // border:1px solid #d8d8d8;
+  border-radius: 3px ;
+  -webkit-border-radius: 3px ;
+  -moz-border-radius: 3px ;
+  -ms-border-radius: 3px ;
+  -o-border-radius: 3px ;
+}

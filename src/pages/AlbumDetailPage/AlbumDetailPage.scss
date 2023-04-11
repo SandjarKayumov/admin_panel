@@ -1,0 +1,47 @@
+.album__detail_items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .album__detail_item {
+    display: flex;
+    width: 32%;
+    margin: 5px;
+    border: 1px solid lightgrey;
+    color: #2c2c2c;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: relative;
+    .album__detail_card {
+      position: relative;
+      height: 150px;
+      cursor: pointer;
+    }
+    .album-detail__view__delete {
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      flex-direction: column;
+      top: 0px;
+      left: 0;
+      z-index: 0;
+      background-color: rgba(0,0,0,0.5);
+      color: rgba(255,255,255,1);
+      padding: 5px;
+      height: 100%;
+      transition: 0.5;
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5;
+      -ms-transition: 0.5;
+      -o-transition: 0.5;
+      -webkit-transition: 0.5;
+      border-bottom-right-radius: 5px;
+      border-top-right-radius: 5px;
+      &:hover {
+        // display: none;
+      }
+    }
+    .album__detail_title {
+      padding: 5px;
+      text-transform: capitalize;
+    }
+  }
+}

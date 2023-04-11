@@ -1,0 +1,35 @@
+.create-user-modal2 {
+  .create-user__content2 {
+    width: 900px;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 25px 0;
+    text-align: center;
+    color: grey;
+    font-weight: 500;
+  }
+
+  &__field {
+    width: 100%;
+    margin: 7px 0px 7px 0;
+    padding: 10px;
+    border: 1px solid #d8d8d8;
+    text-transform: capitalize;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+  .create-user__btn {
+    width: 150px;
+    display: flex;
+    background-color: #177bc3;
+    justify-content: center;
+    align-items: center;
+    margin: 25px auto;
+  }
+}

@@ -1,0 +1,22 @@
+.post__detail {
+  padding: 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  .post__detail_items {
+    display: flex;
+  }
+  .post__detail_item {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .post__detail_item:first-child {
+    width: 120px;
+  }
+  .post__detail_item:last-child {
+    color: #808080;
+    .first__letter::first-letter {
+      text-transform: capitalize;
+      color: #808080;
+    }
+  }
+}

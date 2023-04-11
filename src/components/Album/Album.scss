@@ -1,0 +1,31 @@
+@import "./../../../public/styles/mixins.scss";
+.album__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .album__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  .album__title {
+    font-size: 14px;
+    color: #808080;
+    text-transform: capitalize;
+  }
+  .view__delete{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ 
+}
