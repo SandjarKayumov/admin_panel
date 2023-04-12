@@ -10,7 +10,7 @@ const HomePage = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const {todos, isLoading} = useSelector((state) => state.todos);
 
     useEffect(() => {

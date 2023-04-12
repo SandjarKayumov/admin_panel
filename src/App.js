@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import UserListPage from "./pages/UserListPage/UserListPage";
 import HomePage from "./pages/HomePage/HomePage";
 import UserDetailPage from "./pages/UserDetailPage/UserDetailPage";
@@ -22,22 +22,24 @@ const App = () => {
   }
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="user-list" element={<UserListPage />} />
-          <Route path="/user-detail/:id" element={<UserDetailPage />} />
-          <Route path="/post-list" element={<PostListPage />} />
-          <Route path="/post-detail/:id" element={<PostDetailPage />} />
-          <Route path="/album-list" element={<AlbumsPage />} />
-          <Route path="/album-detail-page/:id" element={<AlbumDetailPage />} />
-          <Route path="/reports" element={<Reports />} />
-          <Route path="/user-list-two" element={<UserListPage2 />} />
-          <Route path="/user-detail/:id" element={<UserDetailPage2 />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
-        <Route path="/login-page" element={<LoginPage />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="user-list" element={<UserListPage />} />
+            <Route path="/user-detail/:id" element={<UserDetailPage />} />
+            <Route path="/post-list" element={<PostListPage />} />
+            <Route path="/post-detail/:id" element={<PostDetailPage />} />
+            <Route path="/album-list" element={<AlbumsPage />} />
+            <Route path="/album-detail-page/:id" element={<AlbumDetailPage />} />
+            <Route path="/reports" element={<Reports />} />
+            <Route path="/user-list-two" element={<UserListPage2 />} />
+            <Route path="/user-detail/:id" element={<UserDetailPage2 />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+          <Route path="/login-page" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

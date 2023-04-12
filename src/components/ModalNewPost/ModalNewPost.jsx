@@ -19,7 +19,7 @@ const NewPostModal = ({ createPost }) => {
     });
   }, []);
 
-  if (!post) return null;
+  // if (!post) return null;
 
 
   const addNewPost = (e) => {

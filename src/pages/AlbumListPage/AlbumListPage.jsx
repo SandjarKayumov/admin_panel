@@ -14,12 +14,10 @@ const AlbumsPage = () => {
   useEffect(() => {
     setIsLoading(true);
     axios.get(`${albumsURL}/1`).then((response) => {
-      setTimeout(() => {
-        setAlbums(response.data);
-        setIsLoading(false);
-        setPagination(true);
-        console.log(response.data);
-      }, 2000);
+      setAlbums(response.data);
+      setIsLoading(false);
+      setPagination(true);
+      console.log(response.data);
     });
   }, []);
 
@@ -29,11 +27,11 @@ const AlbumsPage = () => {
     <div>
       <h2 className="page__title">all albums</h2>
       <div className="albums__page">
-        {isLoading && <Loader />  }
-        <Album albums={albums} />
+        {isLoading && <Loader />}<Album albums={albums} />
+
       </div>
-        {isPagination && (<Pagination className="pagination__center" color="primary" count="10" />
-        )}
+      {isPagination && (<Pagination className="pagination__center" color="primary" count="10" />
+      )}
     </div>
   );
 };
