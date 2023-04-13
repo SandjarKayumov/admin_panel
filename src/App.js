@@ -13,6 +13,7 @@ import Layout from "./Layout/Layout";
 import Reports from "./pages/ReportsPage/Reports";
 import UserListPage2 from "./pages/UserListPage2/UserListPage2";
 import UserDetailPage2 from "./pages/UserDetailPage2/UserDetailPage2";
+import PokemonList from "./pages/PokemonList/PokemonList";
 
 const App = () => {
   const [token, setToken] = useState(true);
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/reports" element={<Reports />} />
             <Route path="/user-list-two" element={<UserListPage2 />} />
             <Route path="/user-detail/:id" element={<UserDetailPage2 />} />
+            <Route path="/pokemon-list" element={<PokemonList/>} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
           <Route path="/login-page" element={<LoginPage />} />

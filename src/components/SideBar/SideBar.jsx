@@ -18,11 +18,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const SideBar = ({ isOpen }) => {
   const categories = [
-    { id: 1, title: "Users", url: "/user-list" },
-    { id: 2, title: "Posts", url: "/post-list" },
-    { id: 3, title: "Albums", url: "/album-list" },
-    { id: 4, title: "Report", url: "/reports" },
-    { id: 5, title: "Users 2", url: "/user-list-two" },
+    { id: 1, title: "Users", url: "/user-list", icon:  <GroupIcon/>},
+    { id: 2, title: "Posts", url: "/post-list" , icon: <PostAddIcon/>},
+    { id: 3, title: "Albums", url: "/album-list", icon: <PhotoLibraryIcon/> },
+    { id: 4, title: "Report", url: "/reports" , icon: <CalendarMonthIcon/>},
+    { id: 5, title: "Users 2", url: "/user-list-two" , icon: <GroupIcon/>},
+    { id: 6, title: "Pokemon", url: "/pokemon-list" },
   ];
   return (
     <aside className={cn("sidebar", { active: isOpen })}>
@@ -34,10 +35,8 @@ const SideBar = ({ isOpen }) => {
       <nav>
         <ul>
           {categories.map((category) => (
-            <li key={category.id}><Link to={category.url}>{category.title}</Link></li>
+            <li key={category.id}><Link to={category.url}>{category.icon && category.icon}{category.title}</Link></li>
           ))}
-
-
           {/* <li>
             <NavLink to="/user-list">
               <GroupIcon />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+  import React, { useState, useEffect } from "react";
 import Post from "../../components/Post/Post";
 import "./PostListPage.scss";
 import axios from "axios";
