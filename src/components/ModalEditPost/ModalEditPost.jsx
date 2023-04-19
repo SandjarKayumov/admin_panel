@@ -38,7 +38,7 @@ const EditPostModal = ({ id }) => {
       </label>
       <textarea
         value={post.body}
-        onChange={(e) => setPost((prev) => ({ ...prev, body: e.target.value}))}
+        onChange={(e) => setPost((prev) => ({ ...prev, body: e.target.value.toUpperCase()}))}
         name=""
         id=""
         cols="30"
