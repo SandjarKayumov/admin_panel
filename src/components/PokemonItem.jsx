@@ -3,7 +3,8 @@ import React from 'react';
 const PokemonItem = ({ pokemon }) => {
     return (
         <div>
-            {pokemon}
+            {pokemon.name}
+           <img src={pokemon.url}/>
         </div>
     );
 }

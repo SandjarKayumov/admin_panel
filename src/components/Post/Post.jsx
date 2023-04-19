@@ -7,7 +7,6 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import EditPostModal from "../ModalEditPost/ModalEditPost";
 import { useDispatch, useSelector } from "react-redux";
-// import { deletePostAction } from "../../store/postsReducer";
 import {
   addNewPostAction,
   editPostAction,
@@ -28,10 +27,10 @@ const Post = ({ editPost }) => {
     setModalIsOpen2(true);
   };
 
-  const deletePost = (post) => {
-    dispatch(deletePostAction(post));
-    console.log(post.id);
-  };
+  // const deletePost = (post) => {
+  //   dispatch(deletePostAction(post));
+  //   console.log(post.id);
+  // };
 
   return (
     <>
@@ -63,7 +62,7 @@ const Post = ({ editPost }) => {
                 </button>
                 {/* <Link to={`/post-delete/${post.id}`}> */}
                 <button
-                  onClick={deletePost}
+                  onClick={() =>  dispatch(deletePostAction(post.id))}
                   className="delete__post_btn"
                 >
                   <DeleteForeverOutlinedIcon fontSize="small" />

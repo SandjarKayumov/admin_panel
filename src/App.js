@@ -36,7 +36,7 @@ const App = () => {
             <Route path="/reports" element={<Reports />} />
             <Route path="/user-list-two" element={<UserListPage2 />} />
             <Route path="/user-detail/:id" element={<UserDetailPage2 />} />
-            <Route path="/pokemon-list" element={<PokemonList/>} />
+            <Route path="/pokemon-list" element={<PokemonList />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
           <Route path="/login-page" element={<LoginPage />} />

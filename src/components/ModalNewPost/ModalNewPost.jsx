@@ -23,12 +23,12 @@ const NewPostModal = ({ createPost }) => {
 
 
   const addNewPost = (e) => {
-    // e.prevent.default()
+    e.prevent.default()
     const post = {
-      // ...post,
+      ...post,
       id: Date.now(),
       title: setTitle,
-      body:setBody,
+      body: setBody,
     };
    createPost(post);
   };
@@ -70,6 +70,7 @@ const NewPostModal = ({ createPost }) => {
           <Button
             variant="contained"
             className="new__post_btn"
+             onClick={()=> addNewPost(post)}
             style={{ margin: "25px auto" }}
           >
             <SaveAsIcon fontSize="small" />

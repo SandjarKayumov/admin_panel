@@ -49,7 +49,7 @@ const UserListPage2 = () => {
             onClick={() => setModalCreateUser(true)}
           >
             <PersonAddAltOutlinedIcon fontSize="medium" />
-            &nbsp;create user
+            &nbsp;new user
           </Button>
         </div>
         {users.length > 0 ? (

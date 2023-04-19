@@ -56,7 +56,7 @@ const PostListPage = () => {
           <PostAddIcon fontSize="medium" />
           &nbsp;new post
         </Button>
-      </div>
+      </div> 
       <div className="posts__page">
         {posts.length >= 1 ? (
           <Post posts={posts} newPost={newPost} />

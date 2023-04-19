@@ -73,14 +73,17 @@ export const postsReducer = (state = initialState, action) => {
     case ADD_NEW_POST:
       return {
         ...state,
-        posts: [...state.posts, action.payload],
+        // {
+        //   id: Date.now(),
+        //   title: action.payload,
+        //   body: action.payload  
+        // },
       };
     case EDIT_POST:
       return {};
     case DELETE_POST:
       return {
-        ...state,
-        posts: state.posts.filter((post) => post.id !== action.payload)
+        ...state, posts: state.posts.filter((post) => post.id !== action.payload)
       };
 
     default:
@@ -93,5 +96,5 @@ export const postsReducer = (state = initialState, action) => {
 // export const deletePostAction = (payload) => ({ type: DELETE_POST, payload });
 export const addNewPost = () => ({ type: ADD_NEW_POST });
 export const editPost = () => ({ type: EDIT_POST });
-export const deletePostAction = () => ({ type: DELETE_POST });
+export const deletePostAction = (payload) => ({ type: DELETE_POST, payload});
 // export default postsReducer;
