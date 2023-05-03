@@ -34,17 +34,6 @@ const ModalNewUser = ({ createUser }) => {
           <h2 className="">
             <PersonAddAltOutlinedIcon /> &nbsp;New User
           </h2>
-          <div>
-            <label>
-              <strong>Name:</strong>
-            </label>
-            <input
-              type="text"
-              className="create-user-modal__field"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
           <br />
           <div>
             <label>
@@ -55,6 +44,17 @@ const ModalNewUser = ({ createUser }) => {
               className="create-user-modal__field"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
+            />
+          </div>
+          <div>
+            <label>
+              <strong>Name:</strong>
+            </label>
+            <input
+              type="text"
+              className="create-user-modal__field"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <br />

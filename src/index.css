@@ -14,17 +14,24 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .wrapper {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
 }
-.main {
+
+.content {
+  position: relative;
+  top: 60px;
+  min-height: calc(100vh - 60px);
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 .page__title {
   font-size: 30px;
   margin: 30px 0;
@@ -36,9 +43,11 @@ ul {
 li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 button {
   border: none;
   outline: none;
@@ -50,6 +59,7 @@ button {
   cursor: pointer;
   border-radius: 3px;
 }
+
 input {
   outline: none;
   padding: 7px;
@@ -60,18 +70,23 @@ input {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
 }
+
 input:focus {
   border: 1px solid #bfa305;
 }
+
 .cancel__btn {
   background-color: rgb(205, 77, 77);
 }
+
 .confirm__btn {
   background-color: rgb(23, 123, 195);
 }
+
 input:focus {
   border: 1px solid #bfa305;
 }
+
 .pagination__center {
   display: flex;
   justify-content: center;

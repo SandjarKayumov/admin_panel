@@ -23,7 +23,7 @@ const SideBar = ({ isOpen }) => {
     { id: 3, title: "Albums", url: "/album-list", icon: <PhotoLibraryIcon/> },
     { id: 4, title: "Report", url: "/reports" , icon: <CalendarMonthIcon/>},
     { id: 5, title: "Users 2", url: "/user-list-two" , icon: <GroupIcon/>},
-    { id: 6, title: "Pokemon", url: "/pokemon-list" },
+    { id: 6, title: "Pokemon", url: "/pokemon-list" ,},
   ];
   return (
     <aside className={cn("sidebar", { active: isOpen })}>
@@ -35,8 +35,9 @@ const SideBar = ({ isOpen }) => {
       <nav>
         <ul>
           {categories.map((category) => (
-            <li key={category.id}><Link to={category.url}>{category.icon && category.icon}{category.title}</Link></li>
+            <li key={category.id}><Link to={category.url}>{category.icon && category.icon}&nbsp;&nbsp;&nbsp;{category.title}</Link></li>
           ))}
+
           {/* <li>
             <NavLink to="/user-list">
               <GroupIcon />

@@ -43,6 +43,7 @@ const NewPostModal = ({ createPost }) => {
         <form onSubmit={addNewPost} className="create__post_body">
           <input
             type="text"
+            autoFocus={true}
             placeholder="Enter Title"
             className="input__post"
             value={title}

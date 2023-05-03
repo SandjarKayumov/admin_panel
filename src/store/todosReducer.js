@@ -49,7 +49,7 @@ export const deleteTodo = (id) => ({ type: DELETE_TODO, id });
 export const checkLoading = (loading) => ({type: CHECK_LOADING, loading})
 export const getTodoList = () => async (dispatch) => {
   try {
-  const todos = await axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10").then(res => res.data)
+  const todos = await axios.get("https://jsonplaceholder.typicode.com/todos").then(res => res.data)
     dispatch(checkLoading(true))
     dispatch({
       type: NEW_TODOS,

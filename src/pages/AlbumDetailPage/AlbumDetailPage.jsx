@@ -13,7 +13,9 @@ const AlbumDetailPage = ({ deleteAlbum }) => {
 
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [album, setAlbum] = useState("");
-  const [isShowViewDelete, setIsShowViewDelete] = useState(false);
+  // const [isShowViewDelete, setIsShowViewDelete] = useState(false);
+  const [isHovering, setIsHovering] = useState(false);
+
 
   useEffect(() => {
     getPhotosByAlbumId();
@@ -26,7 +28,13 @@ const AlbumDetailPage = ({ deleteAlbum }) => {
       .then((res) => res.data);
     setPhotos(res);
   };
+  const hanldeMouseOver = (e) => {
+    setIsHovering(true);
 
+  };
+  const hanldeMouseOut = (e) => {
+    setIsHovering(false);
+  };
   const showModal = (url) => {
     setBigPhoto(url);
     setIsOpenModal(true);
@@ -35,7 +43,7 @@ const AlbumDetailPage = ({ deleteAlbum }) => {
     console.log("img");
   };
 
-//Create confirmation
+  //Create confirmation
   const deletePhoto = (id) => {
     console.log("DELETE", id)
     setPhotos(prev => prev.filter(i => i.id !== id))
@@ -47,28 +55,32 @@ const AlbumDetailPage = ({ deleteAlbum }) => {
       </h3>
       <ul className="album__detail_items">
         {photos.map((i) => (
-          <li className="album__detail_item" key={i.id}>
-            <div className="album__detail_card" >
-              <img src={i.thumbnailUrl} alt="" onClick={viewImage}   />
-              <div className="album-detail__view__delete">
-                <div className="view__delete_items">
-                  <div className="view__delete_item">
-                    <VisibilityIcon
-                      className="view__img"
-                      onClick={() => showModal(i.url)}
-                      key={i.id}
-                      fontSize="small"
-                      style={{ marginBottom: "5px", cursor: "pointer" }}
-                    />
+          <li className="album__detail_item" key={i.id} >
+            <div className="album__detail_card" onMouseOver={hanldeMouseOver} onMouseOut={hanldeMouseOut} >
+              <div className="img__wrap"  >
+                <img src={i.thumbnailUrl} alt="" onClick={viewImage} />
+                {isHovering && (
+                  <div className="album-detail__view__delete" >
+                    <div className="view__delete_items">
+                      <div className="view__delete_item">
+                        <VisibilityIcon
+                          className="view__img"
+                          onClick={() => showModal(i.url)}
+                          key={i.id}
+                          fontSize="small"
+                          style={{ marginBottom: "5px", cursor: "pointer" }}
+                        />
+                      </div>
+                      <div className="view__delete_item">
+                        <DeleteIcon
+                          onClick={() => deletePhoto(i.id)}
+                          fontSize="small"
+                          style={{ cursor: "pointer" }}
+                        />
+                      </div>
+                    </div>
                   </div>
-                  <div className="view__delete_item">
-                    <DeleteIcon
-                      onClick={() => deletePhoto(i.id)}
-                      fontSize="small"
-                      style={{ cursor: "pointer" }}
-                    />
-                  </div>
-                </div>
+                )}
               </div>
             </div>
             <div className="album__detail_card">

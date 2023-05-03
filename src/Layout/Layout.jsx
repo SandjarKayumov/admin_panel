@@ -1,20 +1,21 @@
 import React, { useState } from "react";
+import "./Layout.scss";
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import SideBar from "../components/SideBar/SideBar";
+import Footer from "../components/Footer";
 
 const Layout = () => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
     <>
-      <div className="middle">
-        <Header handleSidebar={() => setIsOpen((prev) => !prev)} />
-        <SideBar isOpen={isOpen} />
-        <main className="main wrapper">
-          <Outlet />
-        </main>
-      </div>
+      <Header handleSidebar={() => setIsOpen((prev) => !prev)} />
+      <SideBar isOpen={isOpen} />
+      <main className="content wrapper">
+        <Outlet />
+      </main>
+      <Footer />
     </>
   );
 };

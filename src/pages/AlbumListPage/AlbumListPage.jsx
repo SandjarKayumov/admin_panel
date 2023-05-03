@@ -27,7 +27,8 @@ const AlbumsPage = () => {
     <div>
       <h2 className="page__title">all albums</h2>
       <div className="albums__page">
-        {isLoading && <Loader />}<Album albums={albums} />
+        {isLoading && <Loader />}
+        <Album albums={albums} />
 
       </div>
       {isPagination && (<Pagination className="pagination__center" color="primary" count="10" />
