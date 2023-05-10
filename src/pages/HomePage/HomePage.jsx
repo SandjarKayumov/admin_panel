@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
       isLoading ? <span>"Loading"</span> :
       <>
-      <h2 className="page__title">Home page</h2>
+      {/* <h2 className="page__title">Home page</h2> */}
       { todos.length > 0 ? (<TodoListPage todos={todos} />) : ( <h2 style={{color:"rgb(255, 0, 0)", textAlign:"center", fontWeight:"500"}}>No todos!</h2>)
       }
       </>  
